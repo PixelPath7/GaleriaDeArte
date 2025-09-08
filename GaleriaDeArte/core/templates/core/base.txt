@@ -17,6 +17,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- Custom CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
 
@@ -161,5 +166,6 @@
         });
     </script>
     
+    {% block extra_js %}{% endblock %}
 </body>
 </html>
